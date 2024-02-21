@@ -20,7 +20,7 @@ Execute the following command to run the server, replacing <server-ip> with the 
 
 
 Copy code
-python manage.py runserver <server-ip>:8000
+python manage.py runserver server-ip:8000
 
 # Running the Client
 Execute the following command to run the client:
@@ -36,7 +36,7 @@ Follow the prompts to create a user account and log in using the provided creden
 Access the following URL to start the OPC server, replacing <server-ip> with the actual IP address of the server:
 
 Copy code
-http://<server-ip>:8000/start-server
+http://server-ip:8000/start-server
 
 
 # Result
