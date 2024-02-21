@@ -1,0 +1,44 @@
+{% extends "registration_base.html" %}
+{%block additional_settings%}
+<div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="mt-2 row col-12">
+        <span class="col-auto">Already have an account?</span>
+        <a class="text-decoration-none col p-0" href="{% url 'home' %}">Login</a>
+    </div>
+</div>
+{%endblock%}
+
+{%block image%}
+<div id="graph"></div>
+    <script>
+        var data = JSON.parse('{{ data | escapejs }}');
+        var currentIndex = 0;
+
+        function plotGraph() {
+            var currentData = data[currentIndex];
+            var xData = Object.keys(currentData).filter(key => key !== "Value");
+            var yData = xData.map(key => currentData[key]);
+
+            var layout = {
+                title: 'Device Data',
+                xaxis: {title: 'Parameters'},
+                yaxis: {title: 'Values'}
+            };
+
+            var trace = {
+                x: xData,
+                y: yData,
+                type: 'bar'
+            };
+
+            var graphDiv = document.getElementById('graph');
+            Plotly.newPlot(graphDiv, [trace], layout);
+
+            currentIndex = (currentIndex + 1) % data.length;
+            setTimeout(plotGraph, 3000); // 3 seconds interval
+        }
+
+        plotGraph();
+    </script>
+{%endblock%}

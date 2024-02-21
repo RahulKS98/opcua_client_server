@@ -1,0 +1,38 @@
+{
+    "VVB001": [
+        {
+            "Value": "0007FC00000BFF000002FF000169FF000042FF03",
+            "Fatigue": "0.0007",
+            "Impact": "1.1",
+            "Friction": "0.2",
+            "Temperature": "36.1",
+            "Crest": "66",
+            "Status": "Device is OK",
+            "OUT1": "On",
+            "OUT2": "On"
+        },
+        {
+            "Value": "0006FC000009FF000002FF000167FF00003BFF03",
+            "Fatigue": "0.0006000000000000001",
+            "Impact": "0.9",
+            "Friction": "0.2",
+            "Temperature": "35.9",
+            "Crest": "59",
+            "Status": "Device is OK",
+            "OUT1": "On",
+            "OUT2": "On"
+        }
+    ],
+    "O5D100": [
+        {
+            "Value": "08A0",
+            "Distance": "138",
+            "Switch_State": "Inactive"
+        },
+        {
+            "Value": "01B1",
+            "Distance": "27",
+            "Switch_State": "Active"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{% extends "registration_base.html" %}
+{%block additional_settings%}`
+<div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="{% url 'home' %}">
+        <button type="button" class="btn btn-success">Back</button>
+    </a>
+</div>
+    
+{%endblock%}
